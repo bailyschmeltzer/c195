@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="595.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.customersController">
+    <Label layoutX="200.0" layoutY="34.0" prefHeight="28.0" prefWidth="204.0" text="Customers Records">
+        <font>
+            <Font size="23.0" />
+        </font>
+    </Label>
+    <TableView fx:id="custTable" layoutX="29.0" layoutY="86.0" prefHeight="298.0" prefWidth="568.0">
+        <columns>
+            <TableColumn fx:id="custID" prefWidth="38.0" text="ID" />
+            <TableColumn fx:id="custName" prefWidth="92.0" text="Name" />
+            <TableColumn fx:id="custAddress" prefWidth="130.0" text="Address" />
+            <TableColumn fx:id="custZip" prefWidth="116.0" text="Zip Code" />
+            <TableColumn fx:id="custPhone" prefWidth="64.0" text="Phone" />
+            <TableColumn fx:id="custState" prefWidth="127.0" text="First Level Data" />
+        </columns>
+    </TableView>
+    <Label layoutX="29.0" layoutY="397.0" prefHeight="28.0" prefWidth="80.0" text="Customer ID" />
+    <TextField fx:id="editID" editable="false" layoutX="109.0" layoutY="396.0" />
+    <Label layoutX="275.0" layoutY="394.0" prefHeight="28.0" prefWidth="97.0" text="Customer Name" />
+    <TextField fx:id="editName" layoutX="367.0" layoutY="395.0" prefHeight="26.0" prefWidth="230.0" />
+    <Label layoutX="29.0" layoutY="427.0" prefHeight="28.0" prefWidth="109.0" text="Customer Address" />
+    <TextField fx:id="editAddress" layoutX="133.0" layoutY="429.0" prefHeight="26.0" prefWidth="463.0" />
+    <Label layoutX="29.0" layoutY="462.0" prefHeight="28.0" prefWidth="146.0" text="Customer Zip Code" />
+    <TextField fx:id="editZip" layoutX="141.0" layoutY="462.0" prefHeight="26.0" prefWidth="100.0" />
+    <Label layoutX="268.0" layoutY="461.0" prefHeight="28.0" prefWidth="91.0" text="Customer Phone" />
+    <TextField fx:id="editPhone" layoutX="366.0" layoutY="462.0" prefHeight="26.0" prefWidth="230.0" />
+    <ComboBox fx:id="editCountry" layoutX="152.0" layoutY="498.0" onAction="#onActionCountry" prefWidth="150.0" />
+    <Label layoutX="29.0" layoutY="497.0" prefHeight="28.0" prefWidth="105.0" text="Customer Country" />
+    <Label layoutX="310.0" layoutY="498.0" prefHeight="28.0" prefWidth="80.0" text="State/Province" />
+    <ComboBox fx:id="editState" layoutX="392.0" layoutY="499.0" prefHeight="25.0" prefWidth="204.0" />
+    <Button layoutX="550.0" layoutY="535.0" mnemonicParsing="false" onAction="#onActionSave" text="Save" />
+    <Button fx:id="edit" layoutX="25.0" layoutY="525.0" mnemonicParsing="false" onAction="#onActionEdit" text="Edit Customer" />
+    <Button fx:id="cancel" layoutX="550.0" layoutY="565.0" mnemonicParsing="false" onAction="#onActionCancel" text="Back" />
+    <Button fx:id="delete" layoutX="25.0" layoutY="555.0" mnemonicParsing="false" onAction="#onActionDelete" text="Delete Customer" />
+    <Button fx:id="add" layoutX="125.0" layoutY="525.0" mnemonicParsing="false" onAction="#onActionAdd" text="Add New Customer" />
+</AnchorPane>

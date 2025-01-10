@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="475.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.reportsController">
+    <Label layoutX="29.0" layoutY="25.0" prefHeight="26.0" prefWidth="146.0" text="Reports">
+        <font>
+            <Font size="23.0" />
+        </font>
+    </Label>
+    <Button fx:id="exit" layoutX="767.0" layoutY="468.0" mnemonicParsing="false" onAction="#onActionExit" prefHeight="26.0" prefWidth="84.0" text="Back" />
+    <TabPane layoutX="15.0" layoutY="63.0" prefHeight="396.0" prefWidth="848.0" tabClosingPolicy="UNAVAILABLE">
+        <Tab text="Contact Schedule">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                <AnchorPane prefHeight="365.0" prefWidth="848.0">
+                    <ComboBox fx:id="contact" layoutX="659.0" layoutY="3.0" onAction="#onActionContact" prefWidth="150.0" />
+                    <Text layoutX="511.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments by contact:" />
+                    <TableView fx:id="allTable" layoutY="36.0" prefHeight="301.0" prefWidth="848.0">
+                        <columns>
+                            <TableColumn fx:id="apptID" prefWidth="105.0" text="Appointment ID" />
+                            <TableColumn fx:id="apptTitle" prefWidth="46.0" text="Title" />
+                            <TableColumn fx:id="apptDesc" prefWidth="111.5" text="Description" />
+                            <TableColumn fx:id="apptLocation" prefWidth="76.5" text="Location" />
+                            <TableColumn fx:id="apptContact" prefWidth="108.0" text="Contact" />
+                            <TableColumn fx:id="apptType" prefWidth="64.0" text="Type" />
+                            <TableColumn fx:id="start" prefWidth="186.0" text="Start Date/Time" />
+                            <TableColumn fx:id="end" prefWidth="167.5" text="End Date/Time" />
+                            <TableColumn fx:id="custID" prefWidth="75.0" text="CustomerID" />
+                            <TableColumn fx:id="contactID" prefWidth="75.0" text="Contact ID" />
+                        </columns>
+                    </TableView>
+                </AnchorPane>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="apptTotals" onSelectionChanged="#apptTotals" text="Appointment Totals">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                <AnchorPane prefHeight="363.0" prefWidth="848.0">
+                    <TableView fx:id="apptTotalsType" layoutX="74.0" layoutY="62.0" prefHeight="231.0" prefWidth="242.0">
+                        <columns>
+                            <TableColumn fx:id="apptTotalsTypeColumn" prefWidth="123.0" text="Appointment Type" />
+                            <TableColumn fx:id="apptTypeTotalColumn" prefWidth="118.0" text="Total" />
+                        </columns>
+                    </TableView>
+                    <TableView fx:id="monthly" layoutX="376.0" layoutY="61.0" prefHeight="232.0" prefWidth="275.0">
+                        <columns>
+                            <TableColumn fx:id="apptByMonth" prefWidth="148.0" text="Appointments By Month" />
+                            <TableColumn fx:id="apptsMonthlyTotal" prefWidth="126.0" text="Total" />
+                        </columns>
+                    </TableView>
+                </AnchorPane>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="custCountry" onSelectionChanged="#custCountry" text="Customer by Country">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                <AnchorPane prefHeight="363.0" prefWidth="848.0">
+                    <TableView fx:id="custByCountry" layoutX="74.0" layoutY="62.0" prefHeight="253.0" prefWidth="610.0">
+                        <columns>
+                            <TableColumn fx:id="name" prefWidth="270.0" text="Country Name" />
+                            <TableColumn fx:id="counter" prefWidth="339.0" text="Total " />
+                        </columns>
+                    </TableView>
+                </AnchorPane>
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+</AnchorPane>

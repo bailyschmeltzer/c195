@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="350" prefHeight="350.0" prefWidth="202.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.loginController">
+   <PasswordField fx:id="loginPassword" alignment="CENTER" layoutX="25.0" layoutY="165.0" promptText="Password" style="-fx-border-color: gray;" />
+   <Label fx:id="locationText" layoutX="54.0" layoutY="201.0" text="Location:">
+      <font>
+         <Font name="System Bold" size="20.0" />
+      </font></Label>
+   <TextField fx:id="loginLocation" alignment="CENTER" editable="false" layoutX="25.0" layoutY="237.0" prefHeight="26.0" prefWidth="149.0" promptText="Location" style="-fx-border-color: gray; -fx-background-color: white;" />
+   <Label fx:id="loginPasswordLabel" contentDisplay="CENTER" layoutX="50.0" layoutY="125.0" text="Password:">
+      <font>
+         <Font name="System Bold" size="20.0" />
+      </font>
+   </Label>
+   <Button fx:id="loginButton" contentDisplay="CENTER" layoutX="27.0" layoutY="288.0" mnemonicParsing="false" onAction="#onActionLogin" text="Login" />
+   <TextField fx:id="loginUsername" alignment="CENTER" layoutX="25.0" layoutY="90.0" promptText="Username" style="-fx-border-color: gray;" />
+   <Label fx:id="loginUsernameLabel" alignment="CENTER" layoutX="50.0" layoutY="55.0" text="Username:">
+      <font>
+         <Font name="System Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label fx:id="loginLabel" layoutX="27.0" text="LOGIN">
+      <font>
+         <Font name="System Bold" size="48.0" />
+      </font>
+   </Label>
+   <Button fx:id="exitButton" contentDisplay="CENTER" layoutX="119.0" layoutY="288.0" mnemonicParsing="false" onAction="#onActionCancel" text="Cancel" />
+</AnchorPane>
